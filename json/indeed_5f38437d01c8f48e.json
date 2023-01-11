@@ -1,0 +1,41 @@
+{
+    "inventory":{
+        "jobID":"5f38437d01c8f48e",
+        "posted":"2022-11-24T01:53:38.204Z",
+        "searchOrigin":null
+    },
+    "origin_title":"Software Developer (Remote)",
+    "job_info":{
+        "companyName":"Almodovar Group, LLC",
+        "locations":null
+    },
+    "remote":"remote",
+    "visa":null,
+    "citizenship":null,
+    "clearence":null,
+    "education_req":{
+        "degree":null,
+        "major":null},
+        "skills":[],
+        "job_type":["contract"],
+        "compensation":{
+            "salary":{
+                "min":98734,
+                "max":108167,
+                "interval":"year"
+            },
+            "benefits":{
+                "other":["Flexible schedule","Professional development assistance"],
+                "_401K":0,
+                "_401K_matching":0,
+                "PTO":0,
+                "insurance":{
+                    "health":0,
+                    "dental":0,
+                    "vision":0,
+                    "life":0
+                }
+            }
+        },
+        "job_description":null
+    }

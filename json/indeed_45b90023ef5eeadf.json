@@ -1,0 +1,48 @@
+{
+    "inventory":{
+        "jobID":"45b90023ef5eeadf",
+        "posted":"2022-11-24T01:53:42.903Z",
+        "searchOrigin":null
+    },
+    "origin_title":"Software Senior Engineer - Remote",
+    "job_info":{
+        "companyName":"Dell Technologies",
+        "locations":[{
+            "street":null,
+            "city":"Austin",
+            "state":"TX",
+            "zip":null,
+            "country":"United States"
+        }]
+    },
+    "remote":"remote",
+    "visa":null,
+    "citizenship":null,
+    "clearence":null,
+    "education_req":{
+        "degree":null,
+        "major":null
+    },
+    "skills":[],
+    "job_type":[],
+    "compensation":{
+        "salary":{
+            "min":null,
+            "max":null,
+            "interval":null
+        },
+        "benefits":{
+            "other":[],
+            "_401K":0,
+            "_401K_matching":0,
+            "PTO":0,
+            "insurance":{
+                "health":0,
+                "dental":0,
+                "vision":0,
+                "life":0
+            }
+        }
+    },
+    "job_description":null
+}
