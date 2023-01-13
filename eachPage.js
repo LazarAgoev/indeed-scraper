@@ -165,23 +165,7 @@ export async function scrape(fullLink, browser){
     //job Description
     let descr =  $("#jobDescriptionText")
     
-    //not used
-    /*
-    let bold = $('b',descr)
-    bold.each((_,element)=>{
-        data.jobDescription.bold.push($(element).text())
-    });
-
-    let italic = $('i',descr)
-    italic.each((_,element)=>{
-        data.jobDescription.italic.push($(element).text())
-    });
-
-    let underline = $('u',descr)
-    underline.each((_,element)=>{
-        data.jobDescription.underline.push($(element).text())
-    });
-    */
+  
     let descrText = descr.html()
 
     
@@ -189,31 +173,11 @@ export async function scrape(fullLink, browser){
 
 
     //descrText = descrText.replaceAll('<div>', '')
-    //descrText = descrText.replaceAll('</div>', '')
-    //descrText = descrText.replaceAll('<p>', '')
-    //descrText = descrText.replaceAll('</p>', '')
-    //descrText = descrText.replaceAll('<b>', '')
-    //descrText = descrText.replaceAll('</b>', '')
-    //descrText = descrText.replaceAll('<ul>', '')
-    //descrText = descrText.replaceAll('</ul>', '')
-    //descrText = descrText.replaceAll('<li>', '')
-    //descrText = descrText.replaceAll('</li>', '')
-    //descrText = descrText.replaceAll('<i>', '')
-    //descrText = descrText.replaceAll('</i>', '')
-    //descrText = descrText.replaceAll('<u>', '')
-    //descrText = descrText.replaceAll('</u>', '')
-    //descrText = descrText.replaceAll('<br>', '\n')
 
     
     data.job_description = descrText
 
-    //hiring insights not used
-    /*
-    let hiringInsights = $(".jobsearch-HiringInsights-entry","#hiringInsightsSectionRoot")
-    hiringInsights.each((_,element)=>{
-        data.hiringInsights.general.push($(element).text())
-    });
-    */
+ 
 
     let jobActivity = $(".css-kyg8or.eu4oa1w0")
     jobActivity.each((index,element)=>{
