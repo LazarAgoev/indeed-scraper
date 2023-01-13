@@ -9,7 +9,7 @@ JOBNAME is the name of the job you want to scrape
 NUMJOBS is now many jobs you need to scrape
 */
 const JOBNAME="Software engineer";
-const NUMJOBS=10;
+const NUMJOBS=1;
 
 
 

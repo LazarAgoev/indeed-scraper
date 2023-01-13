@@ -77,8 +77,9 @@ export async function scrape(fullLink, browser){
     data.origin_title = title.text()
 
     //company name
-    let company =$("a", ".jobsearch-InlineCompanyRating-companyHeader" ).last()
+    let company =$(".css-czdse3.eu4oa1w0").last()
     data.job_info.companyName= company.text()
+    
     //company location
     let companyLoc = $('div.icl-u-xs-mt--xs.icl-u-textColor--secondary.jobsearch-JobInfoHeader-subtitle.jobsearch-DesktopStickyContainer-subtitle').children()
         companyLoc.each((index, location)=>{
@@ -214,9 +215,9 @@ export async function scrape(fullLink, browser){
     });
     */
 
-    let jobActivity = $(".jobsearch-HiringInsights-entry--bullet")
+    let jobActivity = $(".css-kyg8or.eu4oa1w0")
     jobActivity.each((index,element)=>{
-        if(index === 0)
+        if(index === jobActivity.length - 1)
             data.inventory.posted = $(element).text()
     });
     
@@ -244,16 +245,18 @@ export async function scrape(fullLink, browser){
 //function for tasting purposes
 async function page(){
     const browser = await puppeteer.launch(options)
-    let link = "https://www.indeed.com/viewjob?jk=bf960373fda8c398&q=dishwasher&tk=1gijir33uj3ta801&from=web&advn=3743816628155314&adid=371503356&ad=-6NYlbfkN0CzFdobHjYFpTaQteiYYpoYzywvSjvfsgLYOrDq4TeiiH7_wcwCkq8RLixW0Pfkm1sZXCEV417ZQiyCcpzm_xO2XC1rbMMRbFrZWmNK2o0hGi-VU3RV2UblNf3LJKKKS1-fwv_tpXuWXdWSIZELRSzumBPJljVjtiQ_aQijT-6XIkvSPpFNzWxKTWQqpmnal0agA_1f9RK0zlC5DLvAcxpgDzFA90IaCLNfvTvi5yb6BMYmNHJn-_yA32VrjCXo0LRT-TfAE96N17sCp__RfL0yAOQQKq93Eau2JPiF2rEseX4lDqj0PXnIgdn752_ql8WT5ICKAL-gPIFppL71loXdManreFDA5DXpDQtS3tW73A-rPV3gQtNfK7U4g7UDQK8%3D&pub=4a1b367933fd867b19b072952f68dceb&xkcb=SoDj-_M3WTtjtnwjrh0PbzkdCdPP&vjs=3";
+    let link = "https://www.indeed.com/viewjob?jk=ad0bf990fda90ed6&q=software+engineer&tk=1gmjrrokdirrf801&from=web&advn=7357578771788509&adid=404941508&ad=-6NYlbfkN0C9JA4zi3mVin-AV16cQupsLxLZUK-oxytrHh5RIlMUzsYzMHaNyBW247Ml2BbJYBMQdJAxdWa2kRv2iZRRJrdbPPh_U-E17h5_5SjRzyZCBN-2z-yDN9J-jb0pcIFzu2nUr0f59YC-dUut5ORr1uFmqod8q-bm2UgDOmiCdlbFHkxIqONvD999ClHOUddYn5ppjm9FgPLhUW12CDJmOaxZHXr5HZFtqTZcF_hY9dn1nU0OPjRIlfCeIWCaXTqPq7SY24XUz-WdeiTgE7VtTTVyTlfhXdF8n7Gy9WTXLlJ2zWsTKUOAXArIIQA6aUVrphgm3NCWaLDWNw_v-i59V5oQIGIavA2KtcSh8-Yd-vyRXW6VsbP82mxPk13KMGQiEcdtfk9VpELMrKCVabJp11da&pub=4a1b367933fd867b19b072952f68dceb&xkcb=SoB3-_M3UT_g-SAEFr0LbzkdCdPP&vjs=3";
     let data =await scrape(link,browser)
     data = await convert(data);
-    fs.writeFile('json\\indeed_'+data.inventory.jobID+'.json', JSON.stringify(data), (err) => {
+    /*fs.writeFile('json\\indeed_'+data.inventory.jobID+'.json', JSON.stringify(data), (err) => {
         if (err) throw err;
     });
+    */
+   console.log(data)
     
 
 }
 
-page();
+//page();
 
 export default scrape

@@ -16,8 +16,8 @@ export async function convert(data_origin){
     data_origin = benefits(data_origin);
 
     
-    data_origin.job_description = null;
-    data_origin.inventory.searchOrigin = null;
+    //data_origin.job_description = null;
+    //data_origin.inventory.searchOrigin = null;
     return data_origin
 
 }
@@ -245,6 +245,9 @@ function salary(data){
 }
 function date(data){
     let today = new Date();
+    if(data.inventory.posted === null){
+        return data;
+    }
     let str = data.inventory.posted.toLowerCase()
     if(str==="posted today"){
         data.inventory.posted = today;

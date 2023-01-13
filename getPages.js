@@ -33,7 +33,6 @@ async function getData(fullLink, browser){
 }
 
 export async function getJobs(str, browser, num_jobs){
-
     const page = await browser.newPage()
     await page.goto(str);
     
